@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio & Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <h1>My Portfolio</h1>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I'm a passionate developer sharing my journey through blogs and resources.</p>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section">
+            <h2>My Blog</h2>
+            <div class="blog-form">
+                <h3>Create New Post</h3>
+                <input type="text" id="blogTitle" placeholder="Blog Title">
+                <textarea id="blogContent" placeholder="Write your blog content..."></textarea>
+                <button onclick="createBlogPost()">Post Blog</button>
+            </div>
+            <div id="blogPosts" class="blog-posts"></div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="section">
+            <h2>Resources</h2>
+            <div class="upload-form">
+                <h3>Upload Files</h3>
+                <div class="file-upload">
+                    <label for="fileUpload" class="upload-label">
+                        <span>Choose File</span>
+                        <input type="file" id="fileUpload" accept=".ppt,.pptx,.mp4,.pdf">
+                    </label>
+                    <button onclick="handleFileUpload()">Upload</button>
+                </div>
+            </div>
+            <div id="fileList" class="file-list">
+                <h3>Uploaded Files</h3>
+                <ul id="uploadedFiles"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
